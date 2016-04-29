@@ -1,0 +1,61 @@
+@mixin transition_form($transition_time)
+  transition: all $transition_time ease-in-out
+  -webkit-transition: all $transition_time ease-in-out
+  -moz-transition: all $transition_time ease-in-out
+  -o-transition: all $transition_time ease-in-out
+
+
+#hipster-word
+  .word-wrapper
+    position: absolute
+    left: 50%
+    top: 20%
+    transform: translate(-50%, -20%)
+    text-align: center
+    max-width: 600px
+    width: 100%
+
+    .word
+      font-size: 30px
+      margin: 0
+
+    .seperator
+      width: 10%
+      height: 3px
+      border: none
+      background-color: black
+      margin: 0 auto
+
+    .word-meaning
+      font:
+        size: 18px
+        weight: 200
+
+    .buttons
+      .get-example-btn, .new-word-btn
+        background-color: #E6E6ED
+        color: white
+        padding: 10px 15px
+        border: none
+        border-radius: 20px
+        cursor: pointer
+        @include transition_form(0.3s)
+        font:
+          size: 17px
+
+        &:hover
+          background-color: darken(#E6E6ED, 20%)
+
+    .mustache-wrapper
+      top: 120px
+      animation-name: mustache-up-down
+      animation-duration: 4s
+      background-color: white
+      position: relative
+      height: 300px
+
+      z-index: 9999
+
+      .mustache
+
+        margin-top: -80px
