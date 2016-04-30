@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  openAnimationPicker();
+
   getRandomWord();
   newWord();
 });
@@ -36,5 +38,15 @@ function newWord() {
     setTimeout(function() {
       getRandomWord();
     }, 1000);
+  });
+}
+
+
+
+
+// -------------------- Header --------------------
+function openAnimationPicker() {
+  $('.animation-btn').click(function() {
+    $('.animation-dropdown').fadeToggle('fast');
   });
 }

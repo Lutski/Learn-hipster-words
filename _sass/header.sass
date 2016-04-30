@@ -1,0 +1,54 @@
+$animation-dropdown-bg: #e6e6e6
+
+
+#header
+  position: absolute
+  left: 50%
+  transform: translate(-50%)
+  max-width: 600px
+  z-index: 9999
+
+  .animation-picker
+    .animation-btn
+      background: black
+      border: none
+      cursor: pointer
+      color: white
+      outline: none
+      width: 100%
+      font:
+        size: 18px
+
+    .animation-dropdown
+      margin-top: 10px
+      display: none
+
+      .triangle
+        width: 0
+        height: 0
+        $size: 20px
+        border-left: $size solid transparent
+        border-right: $size solid transparent
+        border-bottom: $size solid $animation-dropdown-bg
+
+        position: relative
+        left: 50%
+        transform: translate(-50%)
+
+      .animations
+        background-color: $animation-dropdown-bg
+        //box-shadow: 1px 1px 10px black
+        border-radius: 3px
+        list-style-type: none
+        margin: 0
+        padding: 0
+
+        li
+          padding: 10px
+          cursor: pointer
+          font:
+            size: 16px
+            weight: 200
+
+          &:hover
+            color: lighten(black, 80%)
