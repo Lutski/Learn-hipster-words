@@ -3,23 +3,31 @@ $(document).ready(function() {
   getMustacheAnimationNameFromDropdown();
   getRandomWord();
   newWord();
+
+  getWordExample();
+  quitWordExample();
 });
 
 // Global variable that determines the mustache animation
 var animation = "mustache-up-down"
 
+// Global variables for word, meaning and example
+var word = "";
+var meaning = "";
+var example = "";
 
 
 function getRandomWord() {
   var allPossibilities = hiptionary.length
   var randomNumber = Math.floor((Math.random() * allPossibilities) + 1)
 
-  var word = hiptionary[randomNumber]["name"];
-  var meaning = hiptionary[randomNumber]["meaning"];
-  var example = hiptionary[randomNumber]["example"];
+  word = hiptionary[randomNumber]["name"];
+  meaning = hiptionary[randomNumber]["meaning"];
+  example = hiptionary[randomNumber]["example"];
 
   $(".word").text(word);
   $(".word-meaning").text(meaning);
+  $('.word-example p').text(example);
 }
 
 function getMustacheAnimation() {
@@ -71,6 +79,22 @@ function newWord() {
   });
 }
 
+
+function getWordExample() {
+  $('.get-example-btn').click(function() {
+    $('.mustache-wrapper .mustache').addClass('example-scale');
+    //$('#hipster-word').toggleClass('blurred-body');
+    $('.word-example').fadeIn();
+  });
+}
+
+function quitWordExample() {
+  $('.scale-down-btn').click(function() {
+    $('.mustache-wrapper .mustache').removeClass('example-scale');
+    //$('#hipster-word').toggleClass('blurred-body');
+    $('.word-example').fadeOut();
+  });
+}
 
 
 

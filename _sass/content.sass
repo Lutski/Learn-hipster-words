@@ -55,7 +55,25 @@
       z-index: 9999
 
       .mustache
+        @include transition_form(0.3s)
         margin-top: -80px
+
+  .word-example
+    position: absolute
+    left: 50%
+    top: 30%
+    transform: translate(-50%, -30%)
+    z-index: 9999
+    color: white
+    text-align: center
+    display: none
+    font:
+      size: 18px
+      weight: 200
+
+    .scale-down-btn
+      
+
 
 
 .mustache-up-down-ani
