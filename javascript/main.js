@@ -100,7 +100,7 @@ function quitWordExample() {
 
 // -------------------- Header --------------------
 function openAnimationPicker() {
-  $('.animation-btn').click(function() {
+  $('.animation-picker').hover(function() {
     $('.animation-dropdown').fadeToggle('fast');
   });
 }

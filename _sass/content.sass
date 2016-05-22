@@ -72,7 +72,18 @@
       weight: 200
 
     .scale-down-btn
-      
+      border: none
+      outline: none
+      background: white
+      padding: 5px 10px
+      cursor: pointer
+      border-radius: 20px
+      @include transition_form(0.3s)
+
+      &:hover
+        background: darken(white, 20%)
+
+
 
 
 
